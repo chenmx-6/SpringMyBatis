@@ -44,7 +44,7 @@
                 </tr>
                 <c:forEach items="${LIST}" var="log">
                 <tr>
-                    <td><fmt:formatDate value="${log.oprTime}" pattern="yyyy-MM-dd HH:mm:ss"/></td>
+                    <td><fmt:formatDate value="${log.oprTime}" pattern="yyyy-MM-dd HH:mm"/></td>
                     <td>${log.operator}</td>
                     <td>${log.moudle}</td>
                     <td>${log.operation}</td>

@@ -21,6 +21,9 @@ public class LogController {
     private LogService logService;
     public void operationLog(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Log> operationLogs = logService.getOperationLog();
+        for (Log operationLog : operationLogs) {
+            System.out.println(operationLog.getOprTime());
+        }
         request.setAttribute("TYPE","操作");
         request.setAttribute("LIST",operationLogs);
         request.getRequestDispatcher("../log_list.jsp").forward(request,response);
